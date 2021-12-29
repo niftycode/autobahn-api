@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.5] - 2021-12-29
+
+- update setup.cfg
+
 ## [1.0.4] - 2021-12-29
 
 - add more tests

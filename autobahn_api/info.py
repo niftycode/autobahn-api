@@ -10,7 +10,7 @@ Date created: December 28th, 2021
 
 import sys
 
-VERSION = '1.0.5'
+VERSION = '1.0.6'
 
 
 def app_info():

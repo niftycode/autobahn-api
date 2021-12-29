@@ -5,4 +5,4 @@ from autobahn_api import info
 
 
 def test_version():
-    assert info.VERSION == "1.0.5"
+    assert info.VERSION == "1.0.6"
