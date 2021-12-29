@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from src.autobahn_api import main
+from autobahn_api import main
 
 import pytest
 

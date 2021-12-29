@@ -4,7 +4,7 @@ Use this tool to fetch data (roadworks, parking_area) from the Autobahn API prov
 
 ## Requirements
 
-* Python 3.7+
+* Python 3.8+
 * requests
 
 To run tests install **pytest**:
@@ -19,11 +19,11 @@ To run tests install **pytest**:
 
 ## Usage
 
-Show all roadworks for Autobahn A1:
+Use `-r` followed by the Autobahn ID to show all roadworks:
 
     autobahn-api -r A1
 
-Show all parking areas for Autobahn A1:
+Use `-p` followed by the Autobahn ID to show all parking areas:
 
     autobahn-api -p A1
 

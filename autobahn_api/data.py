@@ -11,7 +11,7 @@ Date created: December 28th, 2021
 import requests
 import logging
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger()
 
 URL = "https://verkehr.autobahn.de/o/autobahn"
@@ -24,8 +24,8 @@ class EndpointManager:
     -> Retrieve the associated data
     """
     def __init__(self, data_id: str, data_type: str):
-        self.data_id = data_id  # A1
-        self.data_type = data_type  # roadworks
+        self.data_id = data_id  # e.g. A1
+        self.data_type = data_type  # e.g. roadworks
 
     def __repr__(self):
         rep = self.data_id + ", " + self.data_type
@@ -37,9 +37,13 @@ class EndpointManager:
         Returns: Endpoint url
 
         """
-        if self.data_type == "roadworks":
+        if self.data_type == "list":
+            return URL
+
+        elif self.data_type == "roadworks":
             data_url = URL + f"/{self.data_id}/services/roadworks"
             return data_url
+
         else:
             data_url = URL + f"/{self.data_id}/services/parking_lorry"
             logger.debug(data_url)
@@ -58,7 +62,7 @@ class EndpointManager:
             response = requests.get(endpoint)
         except OSError as e:
             print("Error: {0}".format(e))
-            return None
+            raise
 
         # Check if the request is successfull
         # and receive data
@@ -67,4 +71,4 @@ class EndpointManager:
             return response.json()
         else:
             print("JSON data request not successfull!")
-            return None
+            raise
