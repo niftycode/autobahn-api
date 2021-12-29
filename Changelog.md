@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.6] - 2021-12-29
+
+- update setup.cfg
+
 ## [1.0.5] - 2021-12-29
 
 - update setup.cfg
@@ -20,3 +24,8 @@ All notable changes to this project will be documented in this file.
 ## [1.0.2] - 2021-12-29
 
 - Update setup.cfg
+
+## [1.0.1] - 2021-12-29
+
+- fix Bugs
+- add docstrings
