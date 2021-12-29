@@ -29,4 +29,4 @@ Show all parking areas for Autobahn A1:
 
 ## Changelog
 
-see [CHANGELOG.md](https://github.com/niftycode/autobahn-api/blob/main/CHANGELOG.md)
+see [CHANGELOG.md](https://github.com/niftycode/autobahn-api/blob/main/Changelog.md)
