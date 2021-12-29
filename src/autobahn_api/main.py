@@ -8,15 +8,15 @@ provided by https://bund.dev/
 Version: 1.0
 Python 3.10
 Date created: December 28th, 2021
-Date modified: -
+Date modified: December 29th, 2021
 """
 
 import argparse
 import logging
 from pprint import pprint
 
-from autobahn_api import data
-from autobahn_api import info
+from src.autobahn_api import data
+from src.autobahn_api import info
 
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger()

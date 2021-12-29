@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from autobahn_api.data import EndpointManager
+from src.autobahn_api.data import EndpointManager
 
 URL = "https://verkehr.autobahn.de/o/autobahn"
 

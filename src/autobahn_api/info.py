@@ -6,12 +6,11 @@
 App info, license, version
 Python 3.10
 Date created: December 28th, 2021
-Date modified: -
 """
 
 import sys
 
-VERSION = '1.0.2'
+VERSION = '1.0.3'
 
 
 def app_info():
