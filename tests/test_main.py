@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-from autobahn_api import main
+from autobahn_api import cli
 
 import pytest
 
@@ -11,7 +11,7 @@ def create_parser():
     """
     Create a parser
     """
-    parser = main.get_parser()
+    parser = cli.get_parser()
     yield parser
 
 
