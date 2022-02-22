@@ -8,6 +8,7 @@ Python 3.10
 Date created: December 28th, 2021
 """
 
+import sys
 import requests
 import logging
 
@@ -60,9 +61,10 @@ class EndpointManager:
         # Connect to the server
         try:
             response = requests.get(endpoint)
-        except OSError as e:
-            print("Error: {0}".format(e))
-            raise
+        except requests.Timeout as e:
+            sys.exit(f"Unable to retrieve data:\n{e!r}")
+        except requests.ConnectionError as e:
+            sys.exit(f"Unable to retrieve data:\n{e!r}")
 
         # Check if the request is successfull
         # and receive data
@@ -70,5 +72,4 @@ class EndpointManager:
             logger.debug("Status 200, OK")
             return response.json()
         else:
-            print("JSON data request not successfull!")
-            raise
+            sys.exit("JSON data request not successfull!")
